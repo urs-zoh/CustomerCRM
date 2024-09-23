@@ -1,0 +1,15 @@
+@model CustomerCRM.Models.Customer
+
+<h2>Customer Details</h2>
+
+<p>
+    <strong>First Name:</strong> @Model.FirstName
+</p>
+<p>
+    <strong>Last Name:</strong> @Model.LastName
+</p>
+<p>
+    <strong>Email:</strong> @Model.Email
+</p>
+
+<a href="@Url.Action("Index", "Customers")" class="btn btn-secondary">Back to List</a>

@@ -1,0 +1,16 @@
+@model CustomerCRM.Models.Customer
+
+<h2>Delete Customer</h2>
+
+<p>Are you sure you want to delete this customer?</p>
+
+<div>
+    <h4>@Model.FirstName @Model.LastName</h4>
+    <p>Email: @Model.Email</p>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="@Url.Action("Index", "Customers")" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
